@@ -1,0 +1,120 @@
+- name: Home
+  # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
+  # hide-desktop-navigation: true
+  columns:
+    - size: small
+      widgets:
+        - type: rss
+          title: GitHub本周趋势
+          limit: 10
+          collapse-after: 3
+          cache: 12h
+          feeds:
+            - url: https://raw.githubusercontent.com/yunlzheng/autorss/refs/heads/rss/github_trending_rss_feed.xml
+              title: GitHub Trending
+              cache: 1d
+
+        - type: releases
+          cache: 1d
+          # Without authentication the Github API allows for up to 60 requests per hour. You can create a
+          # read-only token from your Github account settings and use it here to increase the limit.
+          # token: ...
+          repositories:
+            - glanceapp/glance
+            - go-gitea/gitea
+            - immich-app/immich
+            - syncthing/syncthing
+        # - type: twitch-channels
+        #   channels:
+        #     - theprimeagen
+        #     - j_blow
+        #     - piratesoftware
+        #     - cohhcarnage
+        #     - christitustech
+        #     - EJ_SA
+
+    - size: full
+      widgets:
+        - type: group
+          widgets:
+            - type: rss
+              title: InfoQ Trending
+              feeds:
+                - url: https://raw.githubusercontent.com/yunlzheng/autorss/refs/heads/rss/infoq_trending_rss_feed.xml
+                  title: InfoQ-Development   
+
+            - type: rss
+              title: 36氪
+              feeds:
+                - url: https://www.36kr.com/feed
+                  title: 36氪
+        
+            - type: rss
+              title: 极客公园
+              feeds:
+                - url: https://www.geekpark.net/rss
+                  title: 极客公园    
+           
+        # - type: videos
+        #   channels:
+        #     - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
+        #     - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
+        #     - UCsBjURrPoezykLs9EqgamOA # Fireship
+        #     - UCBJycsmduvYEL83R_U4JriQ # Marques Brownlee
+        #     - UCHnyfMqiRRG1u-2MsSQLbXA # Veritasium
+
+        - type: group
+          title: 技术博客
+          widgets:
+            - type: rss
+              title: 美团技术团队
+              feeds:
+                - url: https://tech.meituan.com/feed/
+                  title: 美团技术团队
+
+            - type: rss
+              title: 阮一峰的网络日志
+              feeds:
+                - url: https://www.ruanyifeng.com/blog/atom.xml
+                  title: 阮一峰的网络日志
+       
+            - type: rss
+              title: 程序员的🐱
+              feeds:
+                - url: https://catcoding.me/atom.xml
+                  title:  程序员的🐱
+            
+            - type: rss
+              title: MAC玩法
+              feeds:
+                - url: https://www.waerfa.com/feed
+                  title: MAC玩法
+
+    - size: small
+      widgets:
+        - type: calendar
+          title: 日历
+          first-day-of-week: monday
+
+        - type: weather
+          title: 今日天气
+          location: Chengdu, China
+          units: metric # alternatively "imperial"
+          hour-format: 24h # alternatively "24h"
+          # Optionally hide the location from being displayed in the widget
+          # hide-location: true
+
+        # - type: markets
+        #   markets:
+        #     - symbol: SPY
+        #       name: S&P 500
+        #     - symbol: BTC-USD
+        #       name: Bitcoin
+        #     - symbol: NVDA
+        #       name: NVIDIA
+        #     - symbol: AAPL
+        #       name: Apple
+        #     - symbol: MSFT
+        #       name: Microsoft
+
+
