@@ -1,0 +1,20 @@
+- name: v2ex
+  # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
+  # hide-desktop-navigation: true
+  columns:
+
+    - size: full
+      widgets:
+        - type: group
+          widgets:
+            - type: rss
+              title: 创意Creative
+              feeds:
+                - url: https://www.v2ex.com/feed/tab/creative.xml
+                  title: 创意Creative
+
+            - type: rss
+              title: 酷工作Jobs
+              feeds:
+                - url: https://www.v2ex.com/feed/tab/jobs.xml
+                  title: 酷工作Jobs 

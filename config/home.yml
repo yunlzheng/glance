@@ -10,7 +10,7 @@
           collapse-after: 3
           cache: 12h
           feeds:
-            - url: https://raw.githubusercontent.com/yunlzheng/autorss/refs/heads/rss/github_trending_rss_feed.xml
+            - url: https://raw.githubusercontent.com/yunlzheng/autorss/refs/heads/rss/outputs/github_trending_rss_feed.xml
               title: GitHub Trending
               cache: 1d
 
@@ -38,10 +38,16 @@
         - type: group
           widgets:
             - type: rss
-              title: InfoQ Trending
+              title: Hacker New
               feeds:
-                - url: https://raw.githubusercontent.com/yunlzheng/autorss/refs/heads/rss/infoq_trending_rss_feed.xml
-                  title: InfoQ-Development   
+                - url: https://raw.githubusercontent.com/yunlzheng/autorss/refs/heads/rss/outputs/hacker_news_rss_feed.xml
+                  title: Hacker New
+
+            - type: rss
+              title: InfoQ
+              feeds:
+                - url: https://raw.githubusercontent.com/yunlzheng/autorss/refs/heads/rss/outputs/infoq_trending_rss_feed.xml
+                  title: InfoQ   
 
             - type: rss
               title: 36氪
@@ -78,17 +84,17 @@
                 - url: https://www.ruanyifeng.com/blog/atom.xml
                   title: 阮一峰的网络日志
        
-            - type: rss
-              title: 程序员的🐱
-              feeds:
-                - url: https://catcoding.me/atom.xml
-                  title:  程序员的🐱
+            # - type: rss
+            #   title: 程序员的🐱
+            #   feeds:
+            #     - url: https://catcoding.me/atom.xml
+            #       title:  程序员的🐱
             
-            - type: rss
-              title: MAC玩法
-              feeds:
-                - url: https://www.waerfa.com/feed
-                  title: MAC玩法
+            # - type: rss
+            #   title: MAC玩法
+            #   feeds:
+            #     - url: https://www.waerfa.com/feed
+            #       title: MAC玩法
 
     - size: small
       widgets:
